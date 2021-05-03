@@ -14,5 +14,5 @@ Here is the link for our web app, a tentatively named [cBay](https://i6.cims.nyu
 
 ## Collaborators
 
-Charlie Xiang, yx2017, [Github](https://github.com/xiang-charlie)
+Charlie Xiang, yx2017, [Github](https://github.com/xiang-charlie)  
 Rachel Qiu, rq374, [Github](https://github.com/Rachelq7)
