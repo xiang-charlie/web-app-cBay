@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<h2>Create</h2>
+<p>Write a new listing:</p>
+<form method="POST" action="{{ url_for('create_post')}}">
+  <p>Your name: <input type="text" id="fname" name="fname" /><br /></p>
+  <P>Your email: <input type="text" id="femail" name="femail" /><br /></p>
+  <p>Item name: <input type="text" id="fitem" name="fitem" /><br /></p>
+  <p>Condition:
+    <select name="fcondition" id="fcondition">
+      <option value="New">New</option>
+      <option value="Like new">Like new</option>
+      <option value="Used">Used</option>
+      <option value="Needs fixing">Needs fixing</option>
+    </select>
+    <br />
+  </p>
+  <p>Item Category:
+    <select name="fcategory" id="fcategory">
+      <option value="Accessories">Accessories</option>
+      <option value="Arts">Arts & Crafts</option>
+      <option value="Automotive">Automotive</option>
+      <option value="Beauty">Beauty</option>
+      <option value="Books">Books</option>
+      <option value="Clothing">Clothing</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Handmade">Handmade</option>
+      <option value="Kitchen">Kitchen</option>
+      <option value="Pets">Pets</option>
+      <option value="Toys">Toys</option>
+      <option value="Video games">Video Games</option>
+    </select>
+    <br />
+  </p>
+  <p>Price: <input type="number" id="fprice" name="fprice" step = "0.01" /><br /></p>
+  <p>Shipping Included:
+    <select name="fshipping" id="fshipping">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+    <br />
+  </p>
+  <p>
+    Description/Notes:
+    <textarea type="text" id="fdescription" name="fdescription"></textarea>
+  </p>
+  <p>Status:
+    <select name="fsold" id="fsold">
+      <option value="Not sold">Not sold</option>
+      <option value="Sold">Sold</option>
+    </select>
+    <br />
+  </p>
+  <p>Listing Password (Please write this down somewhere!): <input type="text" id="fpassword" name="fpassword" /><br /></p>
+  <p>
+    <a href="{{ url_for('home')}}">Cancel</a>
+    <input type="submit" name="create-btn" value="Post" />
+  </p>
+</form>
+{% endblock %}

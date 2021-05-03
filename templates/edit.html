@@ -1,0 +1,67 @@
+{% extends 'base.html' %} {% block container %}
+<h2>Update</h2>
+<p>Edit a listing:</p>
+<form method="POST" action="{{ url_for('edit_post', mongoid=mongoid) }}">
+  <p>
+    Your name: 
+    <input type="text" id="fname" name="fname" value="{{doc.name}}" />
+    <br />
+  </p>
+  <p>Item name: 
+    <input type="text" id="fitem" name="fitem" value="{{doc.item_name}}" />
+    <br />
+  </p>
+  <p>Condition: 
+    <select name="fcondition" id="fcondition" value="{{doc.condition}}">
+      <option value="New">New</option>
+      <option value="Like new">Like new</option>
+      <option value="Used">Used</option>
+      <option value="Needs fixing">Needs fixing</option>
+    </select>
+    <br />
+  </p>
+  <p>Item Category: 
+    <select name="fcategory" id="fcategory" value="{{doc.category}}">
+      <option value="Accessories">Accessories</option>
+      <option value="Arts">Arts & Crafts</option>
+      <option value="Automotive">Automotive</option>
+      <option value="Beauty">Beauty</option>
+      <option value="Books">Books</option>
+      <option value="Clothing">Clothing</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Handmade">Handmade</option>
+      <option value="Kitchen">Kitchen</option>
+      <option value="Pets">Pets</option>
+      <option value="Toys">Toys</option>
+      <option value="Video games">Video Games</option>
+    </select>
+    <br />
+  </p>
+  <p>Price: 
+    <input type="number" id="fprice" name="fprice" step = "0.01" value="{{ doc.price }}" />
+    <br />
+  </p>
+  <p>Shipping Included:
+    <select name="fshipping" id="fshipping" value="{{doc.shipping}}">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+    <br />
+  </p>
+  <p>
+    Description/Notes: 
+    <textarea type="text" id="fdescription" name="fdescription">{{ doc.description }}</textarea>
+  </p>
+  <p>Sold?: 
+    <select name="fsold" id="fsold" value="{{doc.sold}}">
+      <option value="Not sold">Not sold</option>
+      <option value="Sold">Sold</option>
+    </select>
+    <br />
+  </p>
+  <p>
+    <a href="{{ url_for('read')}}">Cancel</a>
+    <input type="submit" name="edit-btn" value="Save" />
+  </p>
+</form>
+{% endblock %}

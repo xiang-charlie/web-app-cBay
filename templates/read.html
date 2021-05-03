@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<h2>Listings</h2>
+<p>Filter:
+    <form method="POST" action="{{ url_for('read_filterby')}}">
+    Condition:
+    <select name="fcondition" id="fcondition">
+        <option value="">   </option>
+        <option value="New">New</option>
+        <option value="Like new">Like new</option>
+        <option value="Used">Used</option>
+        <option value="Needs fixing">Needs fixing</option>
+    </select>
+    Item Category:
+    <select name="fcategory" id="fcategory">
+        <option value="">   </option>
+        <option value="Accessories">Accessories</option>
+        <option value="Arts">Arts & Crafts</option>
+        <option value="Automotive">Automotive</option>
+        <option value="Beauty">Beauty</option>
+        <option value="Books">Books</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Handmade">Handmade</option>
+        <option value="Kitchen">Kitchen</option>
+        <option value="Pets">Pets</option>
+        <option value="Toys">Toys</option>
+        <option value="Video games">Video Games</option>
+    </select>
+    Price:
+    <select name="fprice" id="fprice">
+        <option value="">   </option>
+        <option value="Cheap">Low to high</option>
+        <option value="Expensive">Highest to low</option>
+    </select>
+    Shipping Included:
+    <select name="fshipping" id="fshipping">
+        <option value="">   </option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+    <input type="submit" name="filter-btn" value="Filter" /></form>
+</p>
+
+<p>
+    {% for doc in docs %}
+    <div>
+        <hr class="solid">
+        <p class="post">
+            Posted by {{doc.name}} at {{ doc.created_at.strftime("%H:%M on %d %B %Y") }}
+            </br>
+            <a href="{{ url_for('edit_p',mongoid=doc._id)}}">Edit</a> | <a href="{{ url_for('delete_p',mongoid=doc._id)}}">Delete</a> | <a href = "mailto: {{ doc.email }}" >Email Seller</a> 
+            </br>
+        </p>
+        <p> 
+
+            Item name: <a href="{{ url_for('read_comments',mongoid=doc._id) }}">{{ doc.item_name }}</a><br>
+            Condition: {{ doc.condition }}<br>
+            Category: {{ doc.category }}<br>
+            Price: ${{ doc.display_price }}<br>
+            Shipping Included: {{ doc.shipping }}<br>
+            <br>
+            Description:<br>
+            {{ doc.description }}<br>
+            <br>
+            Status: {{ doc.sold }}
+        </p>
+    </div>
+    {%endfor%}
+</p>
+{% endblock %}

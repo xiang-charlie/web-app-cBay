@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<h2>Welcome!</h2>
+<p>Welcome to the Flask app cBay. This is the home page. Here are a few links to example pages you might find interesting.</p>
+<p>What sort of deals are you looking for today?</p>
+<p>   By category:
+    <ul class="list">
+        <li><a href="{{ url_for('read_accessories')}}">Accessories</a></li>
+        <li><a href="{{ url_for('read_arts')}}">Arts & Crafts</a></li>
+        <li><a href="{{ url_for('read_automotive')}}">Automotive</a></li>
+        <li><a href="{{ url_for('read_beauty')}}">Beauty</a></li>
+        <li><a href="{{ url_for('read_books')}}">Books</a></li>
+        <li><a href="{{ url_for('read_clothing')}}">Clothing</a></li>
+        <li><a href="{{ url_for('read_electronics')}}">Electronics</a></li>
+        <li><a href="{{ url_for('read_handmade')}}">Handmade</a></li>
+        <li><a href="{{ url_for('read_kitchen')}}">Kitchen</a></li>
+        <li><a href="{{ url_for('read_pets')}}">Pets</a></li>
+        <li><a href="{{ url_for('read_toys')}}">Toys</a></li>
+        <li><a href="{{ url_for('read_videogames')}}">Video Games</a></li>
+    </ul>
+</p>
+<p>   By price:
+    <ul class="list">
+        <li><a href="{{ url_for('read_cheapest')}}">$5 and under</a></li>
+        <li><a href="{{ url_for('read_cheaper')}}">$20 and under</a></li>
+        <li><a href="{{ url_for('read_cheap')}}">$50 and under</a></li>
+    </ul>
+</p>
+<p>   By condition:
+    <ul class="list">
+        <li><a href="{{ url_for('read_New')}}">New</a></li>
+        <li><a href="{{ url_for('read_LikeNew')}}">Like New</a></li>
+        <li><a href="{{ url_for('read_Used')}}">Used</a></li>
+        <li><a href="{{ url_for('read_NeedsFixing')}}">Needs Fixing</a></li>
+    </ul>
+</p>
+{% endblock %}
