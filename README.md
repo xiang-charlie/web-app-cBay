@@ -10,7 +10,7 @@ Lastly, there is a filter system that allows the user to filter by condition (of
  
 ## Links
 
-Here is the link for our web app, a tentatively named [cBay](https://i6.cims.nyu.edu/~yx2017/web-app-charlie-solo/flask.cgi/).
+Here is the link for our web app, a tentatively (jokingly) named [cBay](https://i6.cims.nyu.edu/~yx2017/web-app-charlie-solo/flask.cgi/).
 
 ## Collaborators
 
