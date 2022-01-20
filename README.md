@@ -10,9 +10,9 @@ Lastly, there is a filter system that allows the user to filter by condition (of
  
 ## Links
 
-Here is the link for our web app, a tentatively (jokingly) named [cBay](https://i6.cims.nyu.edu/~yx2017/web-app-charlie-solo/flask.cgi/).
+Here is the link for the web app, a tentatively (jokingly) named [cBay](https://i6.cims.nyu.edu/~yx2017/web-app-charlie-solo/flask.cgi/).
 
-## Collaborators
+<!-- ## Collaborators -->
 
-Charlie Xiang, yx2017, [Github](https://github.com/xiang-charlie)  
-Rachel Qiu, rq374, [Github](https://github.com/Rachelq7)
+<!-- Charlie Xiang, yx2017, [Github](https://github.com/xiang-charlie)    -->
+<!-- Rachel Qiu, rq374, [Github](https://github.com/Rachelq7) -->
